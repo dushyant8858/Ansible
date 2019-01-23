@@ -27,13 +27,16 @@ pip install ansible
 
 22222222############accesss other machine########
     4  sudo vi /etc/ansible/hosts
-		192.168.33.20	web
-		192.168.33.30	db
-    5  sudo vi /etc/hosts
 		[webserver]
 		web
 		[databases]
 		db
+		
+		
+    5  sudo vi /etc/hosts
+    		192.168.33.20	web
+		192.168.33.30	db
+		
     6  ssh-keygen
     8  vi  /home/vagrant/.ssh/id_rsa.pub
     9  ssh web
@@ -42,7 +45,7 @@ pip install ansible
   								  2  sudo visudo   or vi /etc/sudoer.tmp
 									sudo ALL=(ALL) NOPASSWD:ALL
 								   3 id 
-11 ansible apache -a "bash —-version"
+11 ansible apache -a "bash â€”-version"
 ansible all -a "cat /etc/hosts"
 12  ansible-playbook -s /vagrant/application.yml
 ssh web
