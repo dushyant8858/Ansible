@@ -1,0 +1,129 @@
+This is a summary of the Ansible Components :
+
+1- Inventories : 
+
+-Static or Local /etc/ansible/hosts
+
+-Can be called from a different file via the " -i " option
+
+-Can also be Dynamic , can be provided via a program
+
+########################################################
+
+2- Modules :
+
+-Modules are the tools in the workshop
+
+-Ansible has many Modules which can be run directly or via playbooks against hosts " local and remote "
+
+-Like " yum , ping " Modules
+
+########################################################
+
+3- Variables :
+
+-Variables are how we deal with the differences between systems since not all systems are the same 
+
+-Variables names should be letters , numbers and underscores
+
+-Variables should always start with a letter
+
+-Variables can be defined in the inventory and playbook
+
+########################################################
+
+4- Ansible Facts
+
+-Facts are the way of getting data from systems
+
+-You can use these facts in plabook variables
+
+-Gathering facts can be disabled in a playbook :
+
+ - it is not always required
+
+ - can speed up execution :
+
+   - hosts: mainhosts
+
+- gather_facts:no
+
+########################################################
+
+5- Play and Playbooks
+
+-Playbooks are the instruction manuals, the hosts are the raw materials
+
+-A playbook is made up of individual plays
+
+-A play is a task
+
+-Playbooks are in YAML Format 
+
+########################################################
+
+6- Configuration Files :
+
+-The default is " /etc/ansible/ansible.cfg "
+
+-The config file is read when a Playbook is run
+
+-We can use config files other than the default as follow : 
+
+ - ANSIBLE_CONFIG (an environmental Variable)
+
+ - ansible.cfg ( in the current directory )
+
+ - .ansible_cfg ( in the home directory )
+
+ - /etc/ansible/ansible.cfg
+
+########################################################
+
+7- Templates :
+
+-Is the definition and set of parameters for running an ansible job
+
+-Job templates are useful to execute the same job many times 
+
+-Variables can be used in the templates
+
+########################################################
+
+8- Handlers :
+
+-A task in a Playbook which can trigger a handler
+
+-Used to handle error conditions 
+
+-Called at the end of each play
+
+########################################################
+
+9- Roles :
+
+-A Playbook is a standalone file Ansible runs to set up your servers
+
+-Roles can be thought of as a playbook that's split into multiple files :
+
+ - One file for tasks , one for variables , one for handlers
+
+-They are the methood to package up tasks , handlers and everything else 
+
+########################################################
+
+10- Ansible Vault :
+
+-Ansible Vault is a secure store
+
+-It allows Ansible to keep sensitive data :
+
+ - Passwords
+
+ - Encrypted Files
+
+-ansible-vault command is used to edit files
+
+-The command line flag " --ask-vault-pass " or " --vault-password-file " 
+
+##########################################################
