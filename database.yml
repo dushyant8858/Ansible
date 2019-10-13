@@ -44,7 +44,7 @@
         
         
     - name: Create application database
-     mysql_db:
+      mysql_db:
        name: ci_database
        state: present
 
