@@ -8,6 +8,9 @@ look Vagrantfile
 
 
 
+
+
+
 11111111111####################install ansible#############
   501  vagrant init bento/centos-7.3
   502  vagrant up
